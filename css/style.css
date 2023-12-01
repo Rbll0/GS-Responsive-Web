@@ -22,16 +22,55 @@ body {
     background-color: rgba(2, 0, 36, 1);
 }
 
-.nav-logo {
-    max-width: 150px;
-}
-
-.nav-links {
-    list-style: none;
+.nav {
+    height: 50px;
+    width: 100%;
+    padding: 2rem 1rem;
     display: flex;
     align-items: center;
-    gap: 3rem;
+    justify-content: space-between;
+    gap: 2rem;
+    position: relative;
 }
+
+.nav>.nav-header {
+    display: inline;
+}
+
+.nav>.nav-header>.nav-title {
+    display: flex;
+    font-size: 22px;
+    color: #fff;
+    padding: 10px 10px 10px 10px;
+    text-align: center;
+}
+
+.nav>.nav-btn {
+    display: none;
+}
+
+.nav>.nav-links {
+    display: flex;
+    align-items: center;
+    float: right;
+    font-size: 18px;
+}
+
+.nav>.nav-links>a {
+    display: inline-block;
+    padding: 13px 10px 13px 10px;
+    text-decoration: none;
+    color: #efefef;
+}
+
+.nav>.nav-links>a:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.nav>#nav-check {
+    display: none;
+}
+
 
 .link a {
     position: relative;

@@ -267,9 +267,7 @@ footer {
 
 
 @media (width < 900px) {
-    .nav-links {
-        display: none;
-    }
+   
 
     header {
         grid-template-columns: repeat(1, 1fr);
@@ -283,14 +281,13 @@ footer {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    .pricing {
-        grid-template-columns: repeat(2, 1fr);
+  
     }
 
     footer {
         grid-template-columns: 1fr 200px;
     }
-}
+
 
 @media (width < 600px) {
     .nav>.nav-btn {
