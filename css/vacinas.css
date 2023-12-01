@@ -1,4 +1,4 @@
-*{
+* {
     padding: 0;
     margin: 0;
     outline: none;
@@ -6,50 +6,78 @@
     box-sizing: border-box;
 }
 
-img{
+img {
     width: 100%;
     display: flex;
 }
 
-a{
+a {
     text-decoration: none;
 }
 
-body{
+body {
     font-family: 'Poppins', sans-serif;
-    background-color:rgba(2,0,36,1);
+    background-color: rgba(2, 0, 36, 1);
 }
 
-nav{
-    max-width: 1200px;
-    margin: auto;
+
+.nav {
+    height: 50px;
+    width: 100%;
     padding: 2rem 1rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 2rem;
+    position: relative;
 }
 
-.nav-logo{
-    max-width: 150px;
+.nav>.nav-header {
+    display: inline;
 }
 
+.nav>.nav-header>.nav-title {
+    display: flex;
+    font-size: 22px;
+    color: #fff;
+    padding: 10px 10px 10px 10px;
+    text-align: center;
+}
 
+.nav>.nav-btn {
+    display: none;
+}
 
-.nav-links{
-    list-style: none;
+.nav>.nav-links {
     display: flex;
     align-items: center;
-    gap: 3rem;
+    float: right;
+    font-size: 18px;
 }
 
-.link a{
+.nav>.nav-links>a {
+    display: inline-block;
+    padding: 13px 10px 13px 10px;
+    text-decoration: none;
+    color: #efefef;
+}
+
+.nav>.nav-links>a:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.nav>#nav-check {
+    display: none;
+}
+
+
+.link a {
     position: relative;
     padding-bottom: 0.75rem;
     color: #fff;
 }
 
-.link a::after{
+.link a::after {
     content: "";
     position: absolute;
     height: 2px;
@@ -60,11 +88,11 @@ nav{
     transition: all 0.3s ease;
 }
 
-.link a:hover::after{
+.link a:hover::after {
     width: 70%;
 }
 
-.btn{
+.btn {
     padding: 1rem 2rem;
     font-size: 1rem;
     color: #fff;
@@ -74,24 +102,24 @@ nav{
     transition: all 0.3s ease;
 }
 
-.btn:hover{
+.btn:hover {
     background-color: #1e40af;
 }
 
-.container{
+.container {
     max-width: 1000px;
     margin: 0 auto;
     padding: 5rem 2rem;
     align-items: center;
 }
 
-.blur{
+.blur {
     position: absolute;
     box-shadow: 0 0 1000px 50px #1d4ed8;
     z-index: -100;
 }
 
-header{
+header {
     position: relative;
     padding-top: 2rem;
     display: grid;
@@ -100,14 +128,14 @@ header{
     gap: 2rem;
 }
 
-header .content h4{
+header .content h4 {
     margin-bottom: 1rem;
     color: #ccc;
     font-size: 1rem;
     font-weight: 600;
 }
 
-header .content h1{
+header .content h1 {
     color: #fff;
     margin-bottom: 1rem;
     font-size: 2.5rem;
@@ -116,18 +144,18 @@ header .content h1{
 }
 
 
-header .content p{
+header .content p {
     justify-content: space-around;
     margin-bottom: 2rem;
     color: #ccc;
     font-size: 1.5rem;
 }
 
-header .image{
+header .image {
     position: relative;
 }
 
-header .image::before{
+header .image::before {
     content: "o";
     position: absolute;
     top: 0;
@@ -141,12 +169,12 @@ header .image::before{
     z-index: -100;
 }
 
-header .image img{
+header .image img {
     max-width: 400px;
     margin: auto;
 }
 
-section .header{
+section .header {
     margin-bottom: 1rem;
     color: #fff;
     text-align: center;
@@ -154,7 +182,7 @@ section .header{
     font-weight: 600;
 }
 
-.features{
+.features {
     margin-top: 4rem;
     display: table;
     grid-template-columns: repeat(4, 1fr);
@@ -163,7 +191,7 @@ section .header{
     margin: 0 auto;
 }
 
-.features .card{
+.features .card {
     background-color: #27272a;
     padding: 1rem;
     border: 2px solid transparent;
@@ -172,12 +200,12 @@ section .header{
     margin-bottom: 20px;
 }
 
-.features .card:hover{
+.features .card:hover {
     background-color: #323232;
     border-color: #fff;
 }
 
-.features .card span{
+.features .card span {
     display: inline-block;
     background-color: #1e40af;
     padding: 2px 9px;
@@ -187,46 +215,46 @@ section .header{
     border-radius: 5px;
 }
 
-.features .card h4{
+.features .card h4 {
     margin-bottom: 0.5rem;
     color: #fff;
     font-size: 1.2rem;
     font-weight: 600;
 }
 
-.features .card p{
+.features .card p {
     color: #ccc;
     margin-bottom: 1rem;
 }
 
-.features .card a{
+.features .card a {
     color: #fff;
     transition: all 0.3s ease;
 }
 
-.features .card a:hover{
+.features .card a:hover {
     color: #1e40af;
 }
 
 
 
-.wrapper{
+.wrapper {
     position: relative;
     width: 400px;
     height: 440px;
     background: transparent;
-    border: 2px solid rgba(2,0,36,1);
+    border: 2px solid rgba(2, 0, 36, 1);
     border-radius: 20px;
-   
+
 }
 
-footer{
+footer {
     position: relative;
     background-color: #1e40af;
 }
 
 
-.footer{
+.footer {
     max-width: 1200px;
     display: flex;
     margin: auto;
@@ -238,41 +266,95 @@ footer{
 }
 
 
-@media (width < 900px){
-    .nav-links{
+@media (width < 900px) {
+    .nav-links {
         display: none;
     }
-    header{
+
+    header {
         grid-template-columns: repeat(1, 1fr);
     }
-    header .image{
+
+    header .image {
         grid-area: 1/1/2/2;
     }
-    .features{
+
+    .features {
         grid-template-columns: repeat(2, 1fr);
     }
-    .pricing{
+
+    .pricing {
         grid-template-columns: repeat(2, 1fr);
     }
-    footer{
+
+    footer {
         grid-template-columns: 1fr 200px;
     }
 }
 
-@media (width < 600px){
-    header .image::before{
-        display: none;
+@media (width < 600px) {
+    .nav>.nav-btn {
+        display: inline-block;
+        position: absolute;
+        right: 0px;
+        top: 0px;
     }
 
-    .features{
+    .nav>.nav-btn>label {
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        padding: 13px;
+    }
+
+    .nav>.nav-btn>label:hover,
+    .nav #nav-check:checked~.nav-btn>label {
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+
+    .nav>.nav-btn>label>span {
+        display: block;
+        width: 25px;
+        height: 10px;
+        border-top: 2px solid #eee;
+        z-index: 1;
+    }
+
+    .nav>.nav-links {
+        position: absolute;
+        display: block;
+        width: 100%;
+        background: rgba(2, 0, 36, 1);
+        height: 0px;
+        transition: all 0.3s ease-in;
+        overflow-y: hidden;
+        top: 50px;
+        left: 0px;
+        z-index: 2;
+    }
+
+    .nav>.nav-links>a {
+        display: block;
+        width: 100%;
+    }
+
+    .nav>#nav-check:not(:checked)~.nav-links {
+        height: 0px;
+    }
+
+    .nav>#nav-check:checked~.nav-links {
+        height: calc(100vh - 50px);
+        overflow-y: auto;
+    }
+
+
+    .features {
         grid-template-columns: repeat(1, 1fr);
     }
 
-    .pricing{
-        grid-template-columns: repeat(1, 1fr);
-    }
 
-    footer{
+
+    footer {
         grid-template-columns: 1fr 150px;
     }
 }

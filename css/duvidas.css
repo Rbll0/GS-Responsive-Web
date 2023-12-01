@@ -28,39 +28,56 @@ nav{
   gap: 2rem;
 }
 
-.nav-logo{
-  max-width: 150px;
-}
-
-
-
-.nav-links{
-  list-style: none;
+.nav {
+  height: 50px;
+  width: 100%;
+  padding: 2rem 1rem;
   display: flex;
   align-items: center;
-  gap: 3rem;
-}
-
-.link a{
+  justify-content: space-between;
+  gap: 2rem;
   position: relative;
-  padding-bottom: 0.75rem;
+}
+
+.nav>.nav-header {
+  display: inline;
+}
+
+.nav>.nav-header>.nav-title {
+  display: flex;
+  font-size: 22px;
   color: #fff;
+  padding: 10px 10px 10px 10px;
+  text-align: center;
 }
 
-.link a::after{
-  content: "";
-  position: absolute;
-  height: 2px;
-  width: 0;
-  bottom: 0;
-  left: 0;
-  background-color: #1d4ed8;
-  transition: all 0.3s ease;
+.nav>.nav-btn {
+  display: none;
 }
 
-.link a:hover::after{
-  width: 70%;
+.nav>.nav-links {
+  display: flex;
+  align-items: center;
+  float: right;
+  font-size: 18px;
 }
+
+.nav>.nav-links>a {
+  display: inline-block;
+  padding: 13px 10px 13px 10px;
+  text-decoration: none;
+  color: #efefef;
+}
+
+.nav>.nav-links>a:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.nav>#nav-check {
+  display: none;
+}
+
+
 
 .btn{
   padding: 1rem 2rem;
@@ -89,6 +106,7 @@ nav{
     animation-duration: 0.4s;
     animation-timing-function: ease-in-out;
     transform-origin: top;
+    margin-top: 75px;
   }
   
   details[open] {
@@ -228,4 +246,73 @@ nav{
     font-family: 'Poppins', sans-serif;
   }
 
- 
+  @media (width < 600px) {
+
+    .nav>.nav-btn {
+        display: inline-block;
+        position: absolute;
+        right: 0px;
+        top: 0px;
+    }
+
+    .nav>.nav-btn>label {
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        padding: 13px;
+    }
+
+    .nav>.nav-btn>label:hover,
+    .nav #nav-check:checked~.nav-btn>label {
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+
+    .nav>.nav-btn>label>span {
+        display: block;
+        width: 25px;
+        height: 10px;
+        border-top: 2px solid #eee;
+        z-index: 1;
+    }
+
+    .nav>.nav-links {
+        position: absolute;
+        display: block;
+        width: 100%;
+        background: rgba(2, 0, 36, 1);
+        height: 0px;
+        transition: all 0.3s ease-in;
+        overflow-y: hidden;
+        top: 50px;
+        left: 0px;
+        z-index: 2;
+    }
+
+    .nav>.nav-links>a {
+        display: block;
+        width: 100%;
+    }
+
+    .nav>#nav-check:not(:checked)~.nav-links {
+        height: 0px;
+    }
+
+    .nav>#nav-check:checked~.nav-links {
+        height: calc(100vh - 50px);
+        overflow-y: auto;
+    }
+
+   
+    .features {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .pricing {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    footer {
+        grid-template-columns: 1fr 150px;
+    }
+
+}
