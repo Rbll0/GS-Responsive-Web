@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/vacinas.css">
+    <link rel="stylesheet" href="./css/recursos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.min.css">
     <title>Vacinas</title>
 </head>
@@ -29,7 +29,7 @@
 
         <div class="nav-links">
             <a href="./index.html">Home</a>
-            <a href="./vacinas.html" target="_blank">Vacinas</a>
+            <a href="./recursos.html" target="_blank">Recursos</a>
             <a href="./duvidas.html" target="_blank">Dúvidas</a>
             <a href="login.html"><button a class="btn">Login</button></a>
 
@@ -79,9 +79,9 @@
             </div>
             <div class="card">
                 <span><i class="ri-robot-2-line"></i></i></span>
-                <h4>IA VacciPro</h4>
+                <h4>ChatBot VacciPro</h4>
                 <p>
-                    Nossa IA e destinada a tirar dúvidas e outros recursos sobre vacinas.
+                    ChatBot é destinado a tirar dúvidas e outros recursos sobre vacinas.
                 </p>
                 <a href="./duvidas.html">Ir para<i class="ri-arrow-right-line"></i></a>
             </div>
@@ -97,12 +97,24 @@
     </section>
     <footer>
         <div class="footer">
-            <p>Gustavo Rabelo Frere RM:553326</p>
-            <p>Vitor Sobral RM:552729</p>
-            <p>Marcelo Vieira Junior RM:553640</p>
+            <p>Gustavo Rabelo Frere | RM: 553326</p>
+            <p>Marcelo Vieira | RM: 553640</p>
+            <p>Vitor Sobral | RM: 552729</p>
         </div>
     </footer>
-
+    <script>
+        window.watsonAssistantChatOptions = {
+          integrationID: "7675b6f2-e671-48a8-8e49-d73caead9fdd", // The ID of this integration.
+          region: "au-syd", // The region your integration is hosted in.
+          serviceInstanceID: "811bb3fb-07aa-44ba-991e-694e4fc1f232", // The ID of your service instance.
+          onLoad: async (instance) => { await instance.render(); }
+        };
+        setTimeout(function(){
+          const t=document.createElement('script');
+          t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+          document.head.appendChild(t);
+        });
+      </script>
 </body>
 
 </html>

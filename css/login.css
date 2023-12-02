@@ -183,7 +183,6 @@ header{
     text-decoration: underline;
 }
 
-
 @media only screen and (max-width: 786px){
     .nav-button{
         display: none;
